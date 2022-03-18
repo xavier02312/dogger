@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2? family= Open+Sans:wght@300;400;600;700 & display=swap');
+
+:root{
+    --black: #000000;
+    --white: #ffffff;           /*racourci variable :root*/
+    --orange: #ff9900;
+    --gray: #999999;
+    --shadow-img: 10px 10px 0 #a2c0be;
+    --gray-dark:  #4a4a4b;
+    --background-color: #dce0e4;
+    --green: #a2c0be;
+    
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.container {
+    width: 60%;
+    margin: auto;
+}    
+/*
+*header
+*/  
+header{
+    background-color: var(--background-color);
+}  
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+}
+header nav ul a {
+    text-decoration: none;
+    color: var(--gray);         /*variable racouci avec root*/
+}
+.logo {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.logo span {
+    color: var(--orange);
+}
+/*
+*Titre, slogan & image
+*/
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+header section img {
+    width: 35%;
+}
+header section h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: lighter;
+}
+header section p {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: lighter;
+    color: var(--gray);
+}
+/* Card
+/*
+*selecteur CSS avancé
+*:not(:first-child) veut dire ":not" : ne pas toucher (:first-child)*/
+main section:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+    align-items: center;
+    text-align: right;
+    margin: 100px 0;
+}    
+.welcome {
+    text-align: center;
+    margin: 65px auto;  /*auto permet d'appliquer des marges sur les côtés de façon égales*/
+    width: 43%;    
+}
+.welcome h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.welcome p {
+    margin: 0;
+    font-weight: lighter;
+    color: var(--gray);
+}
+main section img {
+    width: 50%;
+    /*valeurs attendues "box-shadow"
+    *déplacement sur la droite/gauche, déplacement vers le bas/haut, flou et couleur
+    *valeur positive vers la droite ou le bas
+    *valeur négative vers la gauche ou le haut
+    */
+    box-shadow: var(--shadow-img);
+}
+main section h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+}
+main section p {
+    color: var(--gray);
+    margin-bottom: 50px;
+}
+main section:nth-child(3) {
+    text-align: left;
+}
+.btn {
+    background-color: var(--green);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 12px 32px;  /* on rajoute marge intèrieur en ovale */
+}
+.btn:hover {
+    background-color: var(--black);
+    transition: all 500ms;
+}
+/*
+*Footer
+*/
+footer {
+    background-color: var(--gray-dark);
+    columns: var(--white);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 50px 0;
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;600;700&display=swap');
+
+:root {
+    --black: #000000; /*Quand un hexadecimal comporte 6 fois le même caractères,on peut en metre que 3*/
+    --white: #ffffff;
+    --white-opacity-85: rgba(255, 255, 255, 0.85);
+    --gray: rgb(128, 128, 128);
+    --gray-light: #cbcbcb;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    height: 100vh;  /*je veux la totaliter du body viewport height*/
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;   /*mon main prend la hauteur total du body */ 
+}
+main section {
+    width: 50%;   /*largeur de la section*/
+}
+/*colone de droite pour l'image*/
+.img {
+    background: url('../imgs/women_book.jpg') center no-repeat;
+    background-size: cover;
+    height:100%;
+    /*astuce 1 */
+ /* position: relative; */
+    /*astuce 2 + facile et + utiliser*/
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+}
+.img div {
+    background-color: var(--white-opacity-85);
+    width: 65%;
+    font-size: 1.5rem;
+    padding: 20px;
+    /*astuce 1 */
+ /* position: absolute; 
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);*/
+    /* astuce 2 + facile et + utiliser*/
+    margin-bottom: 50px;
+}
+
+    
